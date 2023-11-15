@@ -13,9 +13,9 @@ function renderWeatherInfo({ weather, main, sys, name, visibility, wind }) {
   createP(`Umidade: ${main.humidity}% | Sensação Térmica: ${parseInt(main.feels_like)}°C`)
 }
 
-function errorAPI(error){
-  createH1("Opps! Aconteceu um erro inesperado.", "error")
-  createP(`Erro: ${error}`)
+function cleanDisplay() {
+  const section = document.getElementById("result");
+  section.innerHTML = ""
 }
 
 function execute() {
@@ -24,15 +24,10 @@ function execute() {
 
   fetch(apiUrl)
     .then((response) => response.json())
-    .catch((error) => {
-      console.log("esse e o erro", error)
-    })
     .then((data) => {
+      cleanDisplay()
       renderWeatherInfo(data);
     })
-    .catch((error) => {
-      console.log("esse e o erro", error)
-    });
 }
 
 document.getElementById("buttonSearch").addEventListener("click", execute)
