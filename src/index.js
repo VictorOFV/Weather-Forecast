@@ -13,11 +13,6 @@ function renderWeatherInfo({ weather, main, sys, name, visibility, wind }) {
   createP(`Umidade: ${main.humidity}% | Sensação Térmica: ${parseInt(main.feels_like)}°C`)
 }
 
-function errorAPI(error){
-  createH1("Opps! Aconteceu um erro inesperado.", "error")
-  createP(`Erro: ${error}`)
-}
-
 function execute() {
   const city = input.value;
   const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${units}&appid=${apiKey}&lang=pt_br`;
@@ -30,9 +25,6 @@ function execute() {
     .then((data) => {
       renderWeatherInfo(data);
     })
-    .catch((error) => {
-      console.log("esse e o erro", error)
-    });
 }
 
 document.getElementById("buttonSearch").addEventListener("click", execute)
