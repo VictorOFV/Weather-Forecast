@@ -1,0 +1,76 @@
+/* Estilizando o body para mudar as cores de fundo */
+body {
+    background-color: #87d4f5; /* Cor de fundo mais escura */
+    color: #000000; /* Cor do texto branca */
+    font-family: Arial, sans-serif; /* Fonte padrão */
+    margin: 0; /* Removendo margens padrão */
+    padding: 0; /* Removendo padding padrão */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Tornando o body ocupar a altura total da viewport */
+    transition: 1s;
+  }  
+  
+  /* Estilizando a seção de entrada */
+  .input {
+    display: flex; /* Usando flexbox para colocar os elementos lado a lado */
+    align-items: center; /* Centralizando verticalmente os elementos */
+    background-color: #5d99ff; /* Cor de fundo branca */
+    border-radius: 10px; /* Cantos arredondados */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 10px; /* Espaçamento interno */
+  }
+  
+  /* Estilizando o input */
+  .input input[type="text"] {
+    flex: 1; /* O input vai ocupar todo o espaço disponível */
+    border: none; /* Remove a borda padrão do input */
+    border-radius: 5px; /* Cantos arredondados */
+    font-size: 16px; /* Tamanho da fonte */
+    background-color: #5d99ff;
+    color: white;
+    padding: 10px; /* Espaçamento interno */
+    outline: none; /* Remove o contorno quando o input está em foco */
+  }
+  
+  /* Estilizando o botão */
+  .input button {
+    padding: 10px 20px; /* Espaçamento interno */
+    background-color: #007bff; /* Cor de fundo azul */
+    color: #fff; /* Cor do texto branco */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Cantos arredondados */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Altera o cursor para uma mãozinha ao passar o mouse */
+    margin-left: 10px; /* Adiciona um espaçamento à esquerda do botão */
+  }
+  
+  /* Estilizando o botão quando passa o mouse */
+  .input button:hover {
+    background-color: #0056b3; /* Cor de fundo mais escura ao passar o mouse */
+  }
+  
+  #result{
+    margin: 20px auto;
+    background-color: #5d99ff;
+    color: #ffffff;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #result p{
+    margin: 0px 0px 10px 0px;
+  }
+
+  #result h1{
+    margin: 0px 0px 15px 0px
+  }
+
+  #imageWeather{
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+  }
